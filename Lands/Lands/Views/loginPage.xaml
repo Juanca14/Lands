@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lands.Views.loginPage"
+             Title="Login">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,20,10,5">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Lands"
+                    FontSize="Large"
+                    FontAttributes="Bold">
+                </Label>
+                <Image Source="onu.png"
+                       WidthRequest="200">
+                </Image>
+                <Grid
+                    Margin="10,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Text="E-Mail">
+                    </Label>
+                    <Entry 
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Keyboard="Email"
+                        Placeholder="Enter you email..">
+                    </Entry>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Text="Password">
+                    </Label>
+                    <Entry 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        IsPassword="true"
+                        Placeholder="Enter you password..">
+                    </Entry>
+                </Grid>
+                <StackLayout
+                    Orientation="Horizontal"
+                    Margin="10,0">
+                    <Label 
+                        HorizontalOptions="StartAndExpand"
+                        FontAttributes="Bold"
+                        Text="Remember in this device"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        HorizontalOptions="End">
+                    </Switch>
+                </StackLayout>
+                <ActivityIndicator></ActivityIndicator>
+                <StackLayout Margin="40,0">
+                    <Button 
+                        BackgroundColor="Navy"
+                        Text="Login"
+                        TextColor="White"
+                        BorderRadius="23">
+                    </Button>
+                    <Button
+                        BackgroundColor="Green"
+                        Text="Register"
+                        TextColor="White"
+                        BorderRadius="23">
+                    </Button>
+                </StackLayout>
+                <StackLayout 
+                    Margin="10"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Image 
+                        Source="facebook_logo.png"
+                        WidthRequest="100"
+                        HeightRequest="50">
+                    </Image>
+                    <Image 
+                        Source="twitter_logo.png"
+                        WidthRequest="100"
+                        HeightRequest="50">
+                    </Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
