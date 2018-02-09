@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.loginPage"
+             BindingContext="{Binding Main, Source={StaticResource locator}}"
              Title="Login">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView BindingContext="{Binding Login}">
             <StackLayout Padding="10,20,10,5">
                 <Label
                     HorizontalOptions="Center"
@@ -13,7 +14,7 @@
                     FontAttributes="Bold">
                 </Label>
                 <Image Source="onu.png"
-                       WidthRequest="200">
+                       WidthRequest="200"> 
                 </Image>
                 <Grid
                     Margin="10,20">
@@ -33,7 +34,8 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Keyboard="Email"
-                        Placeholder="Enter you email..">
+                        Placeholder="Enter you email.."
+                        Text="{Binding Email, Mode=TwoWay}">
                     </Entry>
                     <Label
                         Grid.Row="1"
@@ -47,7 +49,8 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         IsPassword="true"
-                        Placeholder="Enter you password..">
+                        Placeholder="Enter you password.."
+                        Text="{Binding Password, Mode=TwoWay}">
                     </Entry>
                 </Grid>
                 <StackLayout
@@ -56,16 +59,26 @@
                     <Label 
                         HorizontalOptions="StartAndExpand"
                         FontAttributes="Bold"
-                        Text="Remember in this device"
+                        Text="Remember on this device"
                         VerticalOptions="Center">
                     </Label>
                     <Switch
+                        IsToggled="{Binding IsRemembered, Mode=TwoWay}"
                         HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
-                <ActivityIndicator></ActivityIndicator>
-                <StackLayout Margin="40,0">
-                    <Button 
+                <ActivityIndicator 
+                    IsRunning="{Binding isRunning, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                    <Label
+                         HorizontalOptions="Center"
+                         Text="Forgot your password?"
+                         TextColor="Navy">
+                    </Label>
+                    <StackLayout Margin="40,0">
+                    <Button
+                        Command="{Binding LoginCommand}"
                         BackgroundColor="Navy"
                         Text="Login"
                         TextColor="White"
@@ -83,14 +96,22 @@
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
                     <Image 
+                        Aspect="AspectFit"
                         Source="facebook_logo.png"
                         WidthRequest="100"
                         HeightRequest="50">
                     </Image>
                     <Image 
-                        Source="twitter_logo.png"
+                        Aspect="AspectFit"
                         WidthRequest="100"
-                        HeightRequest="50">
+                        HeightRequest="50"
+                        Source="twitter_logo.png">
+                    </Image>
+                    <Image 
+                        Aspect="AspectFit"
+                        WidthRequest="100"
+                        HeightRequest="50"
+                        Source="instagram_logo.png">
                     </Image>
                 </StackLayout>
             </StackLayout>
