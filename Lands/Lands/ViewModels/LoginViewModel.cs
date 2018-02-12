@@ -6,6 +6,7 @@ namespace Lands.ViewModels
     using System.Net.Mail;
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Views;
 
     public class LoginViewModel : BaseViewModel
     {
@@ -15,14 +16,15 @@ namespace Lands.ViewModels
         private bool isRunning;
         private bool isEnabled;
         private string password;
+        private string email;
 
         #endregion
 
         #region Properties
         public string Email
         {
-            get;
-            set;
+            get { return this.email; }
+            set { SetValue(ref this.email, value); }
         }
 
         public string Password
@@ -50,12 +52,12 @@ namespace Lands.ViewModels
         }
         #endregion
 
-        #region Constructores
+        #region Constructors
         public LoginViewModel()
         {
             this.IsRemembered = true;
             this.IsEnabled = true;
-  
+            this.Email = "juank-nac@hotmail.com";
         }
 
         #endregion
@@ -107,8 +109,13 @@ namespace Lands.ViewModels
                 return;
             }
 
-            if (this.Email != "juank-nac@hotmail.com" || this.Password  != "12345")
+            this.IsRunning = true;
+            this.IsEnabled = false;
+
+            if (this.Email != "juank-nac@hotmail.com" || this.Password != "12345")
             {
+                this.IsRunning = false;
+                this.IsEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "Email or password incorrect",
@@ -118,10 +125,15 @@ namespace Lands.ViewModels
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert(
-                   "ok",
-                   "Fuck yeah!!",
-                   "Accept");
+                this.IsRunning = true;
+                this.IsEnabled = true;
+
+                this.Email = String.Empty;
+                this.Password = String.Empty;
+
+                MainViewModel.GetInstance().Lands = new LandsViewModel();
+                await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
+
             }
         }
         #endregion
