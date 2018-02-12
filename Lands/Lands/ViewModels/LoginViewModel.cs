@@ -7,8 +7,17 @@ namespace Lands.ViewModels
     using System.Windows.Input;
     using Xamarin.Forms;
 
-    public class LoginViewModel
+    public class LoginViewModel : BaseViewModel
     {
+
+        #region Attributes
+
+        private bool isRunning;
+        private bool isEnabled;
+        private string password;
+
+        #endregion
+
         #region Properties
         public string Email
         {
@@ -18,14 +27,20 @@ namespace Lands.ViewModels
 
         public string Password
         {
-            get;
-            set;
+            get { return this.password; }
+            set { SetValue(ref this.password, value); }
         }
 
         public bool IsRunning
         {
-            get;
-            set;
+            get { return this.isRunning; }
+            set { SetValue(ref this.isRunning, value); }
+        }
+
+        public bool IsEnabled
+        {
+            get { return this.isEnabled; }
+            set { SetValue(ref this.isEnabled, value); }
         }
 
         public bool IsRemembered
@@ -39,8 +54,10 @@ namespace Lands.ViewModels
         public LoginViewModel()
         {
             this.IsRemembered = true;
-            this.Email = "Juan@a.com";
+            this.IsEnabled = true;
+  
         }
+
         #endregion
 
         #region Commands
@@ -52,6 +69,7 @@ namespace Lands.ViewModels
             }
         }
 
+    
         private async void Login()
         {
             if (string.IsNullOrEmpty(this.Email))
@@ -80,8 +98,6 @@ namespace Lands.ViewModels
             }
 
 
-            
-
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
@@ -89,6 +105,23 @@ namespace Lands.ViewModels
                     "You must enter a password.",
                     "Accept");
                 return;
+            }
+
+            if (this.Email != "juank-nac@hotmail.com" || this.Password  != "12345")
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Email or password incorrect",
+                    "Accept");
+                this.Password = "";
+                return;
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                   "ok",
+                   "Fuck yeah!!",
+                   "Accept");
             }
         }
         #endregion
