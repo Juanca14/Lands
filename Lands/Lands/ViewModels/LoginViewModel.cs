@@ -58,11 +58,14 @@ namespace Lands.ViewModels
             this.IsRemembered = true;
             this.IsEnabled = true;
             this.Email = "juank-nac@hotmail.com";
+            this.Password = "12345";
+ 
         }
 
         #endregion
 
         #region Commands
+
         public ICommand LoginCommand
         {
             get
