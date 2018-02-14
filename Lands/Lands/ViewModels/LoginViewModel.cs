@@ -58,6 +58,7 @@ namespace Lands.ViewModels
             this.IsRemembered = true;
             this.IsEnabled = true;
             this.Email = "juank-nac@hotmail.com";
+            this.Password = "12345";
         }
 
         #endregion
@@ -106,6 +107,9 @@ namespace Lands.ViewModels
                     "Error",
                     "You must enter a password.",
                     "Accept");
+
+                await Application.Current.MainPage.Navigation.PopAsync();
+
                 return;
             }
 
@@ -116,11 +120,16 @@ namespace Lands.ViewModels
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
+
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "Email or password incorrect",
                     "Accept");
-                this.Password = "";
+
+                this.Password = string.Empty;
+
+                await Application.Current.MainPage.Navigation.PopAsync();
+
                 return;
             }
             else
