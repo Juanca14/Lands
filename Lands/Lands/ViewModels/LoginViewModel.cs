@@ -116,7 +116,7 @@ namespace Lands.ViewModels
             this.IsRunning = true;
             this.IsEnabled = false;
 
-            if (this.Email != "juank-nac@hotmail.com" || this.Password != "12345")
+            if (this.Email != "Juank-nac@hotmail.com" || this.Password != "12345")
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;

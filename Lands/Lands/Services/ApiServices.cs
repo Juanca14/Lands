@@ -6,9 +6,41 @@
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using System.Collections.Generic;
+    using Plugin.Connectivity;
 
     public class ApiServices
     {
+
+        public async Task<Response> CheckConnection()
+        {
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                return new Response
+                {
+                    IsSuccess = false,
+                    Message = "Please turn on your internet setting",
+                    
+                };
+   
+            }
+
+            var IsReachable = await CrossConnectivity.Current.IsRemoteReachable("google.com");
+
+            if (!IsReachable)
+            {
+                return new Response
+                {
+                    IsSuccess = false,
+                    Message = "Check you internet connection!"
+                };
+            }
+
+            return new Response
+            {
+                IsSuccess = true,
+                Message = "OK"
+            };
+        }
 
         public async Task<Response> GetList<T>(string urlBase, string servicePrefix, string controller)
         {
