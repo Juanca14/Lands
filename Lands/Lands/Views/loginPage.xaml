@@ -86,7 +86,6 @@
                         TextColor="White"
                         BorderRadius="23">
                     </Button>
-
                     <Button
                         BackgroundColor="Green"
                         HorizontalOptions="FillAndExpand"
@@ -96,8 +95,6 @@
                         BorderRadius="23">
                     </Button>
                 </StackLayout>
-
-               
                 <StackLayout 
                     Margin="10"
                     Orientation="Horizontal"
