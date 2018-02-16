@@ -16,6 +16,12 @@
             set;
         }
 
+        public LandItemViewModel Land
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region Constructors
