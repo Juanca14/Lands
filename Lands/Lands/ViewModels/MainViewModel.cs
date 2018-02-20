@@ -16,7 +16,7 @@
             set;
         }
 
-        public LandItemViewModel Land
+        public LandViewModel Land
         {
             get;
             set;

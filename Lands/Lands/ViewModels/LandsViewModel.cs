@@ -44,7 +44,12 @@
         public string  Filter
         {
             get { return this.filter; }
-            set { SetValue(ref this.filter, value); }
+
+            set
+               {
+                    SetValue(ref this.filter, value);
+                    Search();
+               }
         }
 
         #endregion
@@ -77,6 +82,7 @@
             }
         }
 
+
         #endregion
 
         #region Methods
@@ -95,8 +101,11 @@
             {
                 this.Lands = new ObservableCollection<LandItemViewModel>(
                     this.ToLandItemViewModel().
-                    Where(l => l.Name.ToLower().Contains(this.Filter.ToLower())));
+                    Where(l => l.Name.ToLower().Contains(this.Filter.ToLower()) || 
+                    l.Capital.ToLower().Contains(this.Filter.ToLower())));
             }
+
+            this.IsRefreshing = false;
 
         }
 
