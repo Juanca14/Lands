@@ -2,7 +2,90 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LanguagesPage"
-             Title="Languages">
+             BindingContext="{Binding Main, Source={StaticResource locator}}"
+             Icon="ic_language">
+    <!--Title="Languages"-->
     <ContentPage.Content>
+        <StackLayout
+            Padding="5"
+            BindingContext="{Binding Land}">
+            <Label 
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="Languages"
+                TextColor="Black">
+            </Label>
+            <Label 
+                FontSize="Small"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="{Binding Land.Name}"
+                TextColor="Navy">
+            </Label>
+            <Grid
+                Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Iso 639"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Name"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="3"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Native name"
+                    TextColor="Black">
+                </Label>
+            </Grid>
+            <ListView
+                    HasUnevenRows="true"
+                    ItemsSource="{Binding Languages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".5*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label 
+                                    Grid.Column="0"
+                                    Text="{Binding Iso6391}"
+                                    TextColor="Black">
+                                </Label>
+                                <Label 
+                                    Grid.Column="1"
+                                    Text="{Binding Name}"
+                                    TextColor="Black">
+                                </Label>
+                                <Label 
+                                    Grid.Column="2"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding NativeName}"
+                                    TextColor="Black">
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

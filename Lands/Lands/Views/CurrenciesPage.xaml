@@ -2,7 +2,95 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.CurrenciesPage"
-             Title="Currencies">
+             BindingContext="{Binding Main, Source={StaticResource locator}}"
+             Icon="ic_monetization_on">
+    <!--Title="Currencies"-->
     <ContentPage.Content>
+        <StackLayout
+            Padding="5"
+            BindingContext="{Binding Land}">
+            <StackLayout
+                Padding="5"
+                Orientation="Vertical">
+                <Label 
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Currencies"
+                    TextColor="Black">
+                </Label>
+                <Label 
+                    FontSize="Small"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Land.Name}"
+                    TextColor="Navy">
+                </Label>
+            </StackLayout>
+            <Grid
+                Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Code"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Name"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="3"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="Symbol"
+                    TextColor="Black">
+                </Label>
+            </Grid>
+            <ListView
+                    HasUnevenRows="true"
+                    ItemsSource="{Binding Currencies}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding Code}"
+                                    TextColor="Black">
+                                </Label>
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding Name}"
+                                    TextColor="Black">
+                                </Label>
+                                <Label 
+                                    Grid.Column="2"
+                                    FontSize="20"
+                                    Text="{Binding Symbol}"
+                                    TextColor="Black"
+                                    VerticalOptions="Center">
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
