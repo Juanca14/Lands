@@ -1,9 +1,12 @@
 ﻿
 namespace Lands.ViewModels
 {
+    using System;
     using System.Collections.ObjectModel;
     using System.Linq;
+    using FFImageLoading.Svg.Forms;
     using Models;
+    using Xamarin.Forms;
 
     public class LandViewModel :BaseViewModel
     {
@@ -47,7 +50,7 @@ namespace Lands.ViewModels
 
         public LandViewModel(Land land)
         {
-            this.Land = land;
+            this.Land = land; 
             this.LoadBorders();
             this.Currencies = new ObservableCollection<Currency>(this.Land.Currencies);
             this.Languages = new ObservableCollection<Language>(this.Land.Languages);
