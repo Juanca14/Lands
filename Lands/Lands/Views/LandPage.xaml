@@ -6,8 +6,7 @@
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              BindingContext="{Binding Main,Source={StaticResource locator}}"
-             Icon="ic_info"
-             WidthRequest="50">
+             Icon="ic_info">
     <!--Title="Land" https://github.com/luberda-molinet/FFImageLoading/issues/456 -->
     <ContentPage.Resources>
         <ResourceDictionary>
