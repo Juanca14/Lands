@@ -64,14 +64,14 @@
                     </Switch>
                 </StackLayout>
                 <ActivityIndicator 
-                    IsRunning="{Binding isRunning, Mode=TwoWay}"
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
                     VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <Label
-                        HorizontalOptions="Center"
-                        Text="Forgot your password?"
-                        TextColor="Navy"
-                        VerticalOptions="CenterAndExpand">
+                    HorizontalOptions="Center"
+                    Text="Forgot your password?"
+                    TextColor="Navy"
+                    VerticalOptions="CenterAndExpand">
                 </Label>
                 <StackLayout 
                     Margin="40,0"

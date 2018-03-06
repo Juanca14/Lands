@@ -7,6 +7,7 @@
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using Plugin.Connectivity;
+    using System.Text;
 
     public class ApiServices
     {
@@ -89,5 +90,28 @@
 
         }
 
+        public async Task<TokenResponse> GetToken(string urlBase, string username, string password)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri(urlBase);
+                var response = await client.PostAsync("Token",
+                    new StringContent(string.Format(
+                    "grant_type=password&username={0}&password={1}",
+                    username, password),
+                    Encoding.UTF8, "application/x-www-form-urlencoded"));
+                var resultJSON = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<TokenResponse>(
+                    resultJSON);
+                return result;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }
+
+
