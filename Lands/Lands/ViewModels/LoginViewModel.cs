@@ -8,6 +8,7 @@ namespace Lands.ViewModels
     using System.Windows.Input;
     using Xamarin.Forms;
     using Views;
+    using Helpers;
 
     public class LoginViewModel : BaseViewModel
     {
@@ -81,9 +82,9 @@ namespace Lands.ViewModels
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.EmailValidation,
+                    Languages.Accept);
                 return;
             }
             else
@@ -96,9 +97,9 @@ namespace Lands.ViewModels
                 catch (FormatException)
                 {
                     await Application.Current.MainPage.DisplayAlert(
-                     "Error",
-                     "It must be email type ",
-                     "Accept");
+                     Languages.Error,
+                     Languages.EmailType,
+                     Languages.Accept);
                     return;
                 }
             }
@@ -107,9 +108,9 @@ namespace Lands.ViewModels
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a password.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PasswordValidation,
+                    Languages.Accept);
 
                 await Application.Current.MainPage.Navigation.PopAsync();
 
@@ -127,9 +128,9 @@ namespace Lands.ViewModels
                 this.IsEnabled = true;
 
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     connection.Message,
-                    "Accept");
+                    Languages.Accept);
 
                 await Application.Current.MainPage.Navigation.PopAsync();
 
@@ -147,9 +148,9 @@ namespace Lands.ViewModels
                 this.IsEnabled = true;
 
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Something was wrong, please try later",
-                    "Accept");
+                    Languages.Error,
+                    Languages.SomethingWrong,
+                    Languages.Accept);
 
                 await Application.Current.MainPage.Navigation.PopAsync();
 
@@ -162,9 +163,9 @@ namespace Lands.ViewModels
                 this.IsEnabled = true;
 
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Something was wrong, please try later",
-                    "Accept");
+                    Languages.Error,
+                    Languages.SomethingWrong,
+                    Languages.Accept);
 
                 await Application.Current.MainPage.Navigation.PopAsync();
 
