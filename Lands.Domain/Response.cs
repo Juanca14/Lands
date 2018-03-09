@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lands.Domain
 {
-    public class Class1
+    class Response
     {
     }
 }

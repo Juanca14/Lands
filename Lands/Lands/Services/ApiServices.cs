@@ -8,6 +8,7 @@
     using System.Collections.Generic;
     using Plugin.Connectivity;
     using System.Text;
+    using Domain;
 
     public class ApiServices
     {
