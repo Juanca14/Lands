@@ -1,14 +1,13 @@
-﻿using System.Data.Entity;
-
+﻿
 namespace Lands.Domain
 {
-    public class DBContext : DbContext
-    {
-        public DBContext() : base("DefaultConnection")
-        {
-                
-        }
+    using System.Data.Entity;
 
-        public System.Data.Entity.DbSet<Lands.Domain.User> Users { get; set; }
+    public class DataContext : DbContext
+    {
+        public DataContext() : base("DefaultConnection")
+        {
+
+        }
     }
 }

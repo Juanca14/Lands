@@ -1,33 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Lands.Domain;
-
+﻿
 namespace Lands.Backend.Controllers
 {
+
+    using System.Data.Entity;
+    using System.Threading.Tasks;
+    using System.Net;
+    using System.Web.Mvc;
+    using Lands.Backend.Models;
+    using Lands.Domain;
+
     public class UsersController : Controller
     {
-        private DBContext db = new DBContext();
+        private LocalDataContext db = new LocalDataContext();
 
         // GET: Users
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View(db.Users.ToList());
+            return View(await db.Users.ToListAsync());
         }
 
         // GET: Users/Details/5
-        public ActionResult Details(int? id)
+        public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+            User user = await db.Users.FindAsync(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -46,12 +45,12 @@ namespace Lands.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,FirstName,LastName,Email,Telephone,ImagePath")] User user)
+        public async Task<ActionResult> Create([Bind(Include = "UserId,FirstName,LastName,Email,Telephone,ImagePath")] User user)
         {
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
@@ -59,13 +58,13 @@ namespace Lands.Backend.Controllers
         }
 
         // GET: Users/Edit/5
-        public ActionResult Edit(int? id)
+        public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+            User user = await db.Users.FindAsync(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -78,25 +77,25 @@ namespace Lands.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,FirstName,LastName,Email,Telephone,ImagePath")] User user)
+        public async Task<ActionResult> Edit([Bind(Include = "UserId,FirstName,LastName,Email,Telephone,ImagePath")] User user)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(user).State = EntityState.Modified;
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
             return View(user);
         }
 
         // GET: Users/Delete/5
-        public ActionResult Delete(int? id)
+        public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+            User user = await db.Users.FindAsync(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -107,11 +106,11 @@ namespace Lands.Backend.Controllers
         // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            User user = db.Users.Find(id);
+            User user = await db.Users.FindAsync(id);
             db.Users.Remove(user);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
