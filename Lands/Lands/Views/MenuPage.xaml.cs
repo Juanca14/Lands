@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Lands.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class MenuPage : ContentPage
 	{
-		public LoginPage ()
+		public MenuPage ()
 		{
-            InitializeComponent();
+			InitializeComponent ();
 		}
 	}
 }

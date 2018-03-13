@@ -249,4 +249,16 @@
   <data name="EmailType" xml:space="preserve">
     <value>It must be email type</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="Statics" xml:space="preserve">
+    <value>Statics</value>
+  </data>
 </root>

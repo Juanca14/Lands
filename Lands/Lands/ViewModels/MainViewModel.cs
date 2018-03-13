@@ -1,10 +1,21 @@
-﻿using Lands.Models;
+﻿using Lands.Helpers;
+using Lands.Models;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Lands.ViewModels
 {
     public class MainViewModel
     {
+
+        #region Properties
+
+        public string Token { get; set; }
+
+        public string TokenType { get; set; }
+
+        #endregion
+
         #region Views
 
         public List<Land> LandsList
@@ -31,20 +42,53 @@ namespace Lands.ViewModels
             set;
         }
 
-        public TokenResponse Token
+        public ObservableCollection<MenuItemViewModel> Menus
         {
             get;
             set;
         }
 
-        #endregion
+
+    #endregion
 
         #region Constructors
         public MainViewModel()
         {
             instance = this;
             this.Login = new LoginViewModel();
+            this.LoadMenu();
         }
+        #endregion
+
+        #region Methods
+
+        private void LoadMenu()
+        {
+            this.Menus = new ObservableCollection<MenuItemViewModel>
+            {
+                new MenuItemViewModel
+                {
+                    Icon = "ic_settings",
+                    PageName = "MyProfilePage",
+                    Title = Languages.MyProfile,
+                },
+
+                new MenuItemViewModel
+                {
+                    Icon = "ic_insert_chart",
+                    PageName = "StaticsPage",
+                    Title = Languages.Statics,
+                },
+
+                new MenuItemViewModel
+                {
+                    Icon = "ic_exit_to_app",
+                    PageName = "LoginPage",
+                    Title = Languages.LogOut,
+                }
+            };
+        }
+
         #endregion
 
         #region Singleton

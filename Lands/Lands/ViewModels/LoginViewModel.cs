@@ -63,6 +63,8 @@ namespace Lands.ViewModels
             this.apiServices = new ApiServices();
             this.IsRemembered = true;
             this.IsEnabled = true;
+            this.Email = "Juank-nac@hotmail.com";
+            this.Password = "12345";
         }
 
         #endregion
@@ -137,8 +139,10 @@ namespace Lands.ViewModels
                 return;
             }
 
+            var apiSecurity = Application.Current.Resources["APISecurity"].ToString();
+
             var token = await this.apiServices.GetToken(
-                "http://landsapi.azurewebsites.net",
+                apiSecurity,
                 this.Email,
                 this.Password);
 
@@ -174,9 +178,17 @@ namespace Lands.ViewModels
 
 
             var mainViewModel = MainViewModel.GetInstance();
-            mainViewModel.Token = token;
+            mainViewModel.Token = token.AccessToken;
+            mainViewModel.TokenType = token.TokenType;
+
+            if (this.IsRemembered)
+            {
+                Settings.Token = token.AccessToken;
+                Settings.TokenType = token.TokenType;
+            }
+
             mainViewModel.Lands = new LandsViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
+            Application.Current.MainPage = new MasterPage();
 
             this.IsRunning = false;
             this.IsEnabled = true;

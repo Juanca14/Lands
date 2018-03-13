@@ -1,23 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Lands
+﻿namespace Lands
 {
     using Xamarin.Forms;
     using Views;
+    using Helpers;
+    using ViewModels;
     
     public partial class App : Application
 	{
-		public App ()
+
+        #region Properties
+
+        public static NavigationPage Navigator
+        { 
+            get; set; 
+        }
+
+        #endregion
+
+        #region Constructors
+        public App ()
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new loginPage());
-		}
+            if (string.IsNullOrEmpty(Settings.Token))
+            {
+                this.MainPage = new NavigationPage(new LoginPage());
 
-		protected override void OnStart ()
+            }
+            else
+            {
+                var mainViewModel = MainViewModel.GetInstance();
+                mainViewModel.Token = Settings.Token;
+                mainViewModel.TokenType = Settings.TokenType;
+                mainViewModel.Lands = new LandsViewModel();
+                Application.Current.MainPage = new MasterPage();
+            }
+
+            
+		}
+        #endregion
+
+        #region Methods
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
@@ -31,5 +56,7 @@ namespace Lands
 		{
 			// Handle when your app resumes
 		}
-	}
+
+        #endregion
+    }
 }

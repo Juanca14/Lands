@@ -8,7 +8,6 @@
     using System.Collections.Generic;
     using Plugin.Connectivity;
     using System.Text;
-    using Domain;
 
     public class ApiServices
     {
@@ -95,8 +94,11 @@
         {
             try
             {
-                var client = new HttpClient();
-                client.BaseAddress = new Uri(urlBase);
+                var client = new HttpClient
+                {
+                    BaseAddress = new Uri(urlBase)
+                };
+
                 var response = await client.PostAsync("Token",
                     new StringContent(string.Format(
                     "grant_type=password&username={0}&password={1}",

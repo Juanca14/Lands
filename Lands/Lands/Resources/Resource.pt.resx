@@ -249,4 +249,16 @@
   <data name="EmailType" xml:space="preserve">
     <value>Deve ser um tipo de email</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Fechar Sessão</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Meu perfil</value>
+  </data>
+  <data name="Statics" xml:space="preserve">
+    <value>Estatísticas</value>
+  </data>
 </root>

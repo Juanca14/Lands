@@ -8,8 +8,14 @@
 		<!-- Application resource dictionary -->
 
         <ResourceDictionary>
+            
+            <!-- Locator -->
             <infra:InstanteLocator x:Key="locator"/>
-        </ResourceDictionary>
 
+            <!-- Parameters -->
+            <x:String x:Key="APILands">http://restcountries.eu</x:String>
+            <x:String x:Key="APISecurity">http://landsapi1.azurewebsites.net</x:String>
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

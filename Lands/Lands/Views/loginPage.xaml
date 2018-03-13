@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:Lands.Helpers"
-             x:Class="Lands.Views.loginPage"
+             x:Class="Lands.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource locator}}"
              Title="{i18n:Translate Login}">
     <ContentPage.Content>
         <ScrollView BindingContext="{Binding Login}">
-            <StackLayout Padding="10,20,10,5">
+            <StackLayout Padding="5,20,5,5">
                 <Image Source="onu.png"
                        WidthRequest="200"> 
                 </Image>
@@ -22,7 +22,7 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         VerticalOptions="Center"
-                        FontSize="Large"
+                        FontSize="Medium"
                         FontAttributes="Bold"
                         Text="{i18n:Translate EMail}">
                     </Label>
@@ -37,7 +37,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         VerticalOptions="Center"
-                        FontSize="Large"
+                        FontSize="Medium"
                         FontAttributes="Bold"
                         Text="{i18n:Translate Password}">
                     </Label>
@@ -82,7 +82,7 @@
                         Command="{Binding LoginCommand}"
                         BackgroundColor="Navy"
                         HorizontalOptions="FillAndExpand"
-                        IsEnabled="{Binding isEnabled, Mode=TwoWay}"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="{i18n:Translate Login}"
                         TextColor="White"
                         BorderRadius="23">
@@ -90,7 +90,7 @@
                     <Button
                         BackgroundColor="Green"
                         HorizontalOptions="FillAndExpand"
-                        IsEnabled="{Binding isEnabled, Mode=TwoWay}"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="{i18n:Translate Register}"
                         TextColor="White"
                         BorderRadius="23">
