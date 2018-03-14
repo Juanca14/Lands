@@ -105,9 +105,12 @@
                     "grant_type=password&username={0}&password={1}",
                     username, password),
                     Encoding.UTF8, "application/x-www-form-urlencoded"));
+
                 var resultJSON = await response.Content.ReadAsStringAsync();
+
                 var result = JsonConvert.DeserializeObject<TokenResponse>(
                     resultJSON);
+
                 return result;
             }
             catch
