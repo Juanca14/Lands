@@ -121,7 +121,7 @@
     <value>Aceptar</value>
   </data>
   <data name="EmailPlaceHolder" xml:space="preserve">
-    <value>Ingresa tu email..</value>
+    <value>Ingresa tu email...</value>
   </data>
   <data name="EmailValidation" xml:space="preserve">
     <value>Debes ingresar un email.</value>
@@ -260,5 +260,20 @@
   </data>
   <data name="Statics" xml:space="preserve">
     <value>Estadísticas</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Iso6391" xml:space="preserve">
+    <value>Iso 6391</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Symbol" xml:space="preserve">
+    <value>Símbolo</value>
   </data>
 </root>

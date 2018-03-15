@@ -200,5 +200,25 @@
             get { return Resource.LogOut; }
         }
 
+        public static string Code
+        {
+            get { return Resource.Code; }
+        }
+
+        public static string Name
+        {
+            get { return Resource.Name; }
+        }
+
+        public static string Language
+        {
+            get { return Resource.Language; }
+        }
+
+        public static string Iso6391
+        {
+            get { return Resource.Iso6391; }
+        }
+
     }
 }

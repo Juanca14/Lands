@@ -8,6 +8,7 @@
     using System.Linq;
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Helpers;
 
     public class LandsViewModel : BaseViewModel
     {
@@ -117,18 +118,20 @@
             {
                 this.IsRefreshing = false;
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     connection.Message,
-                    "Accept");
+                    Languages.Accept);
 
                 await Application.Current.MainPage.Navigation.PopAsync();
 
                 return;
             }
 
+            var apiLands = Application.Current.Resources["APILands"].ToString();
+
             var response = await this.apiservices.GetList<Land>
                 (
-                "http://restcountries.eu",
+                apiLands,
                 "/rest",
                 "/v2/all"
                 );
@@ -137,9 +140,9 @@
             {
                 this.IsRefreshing = false;
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     response.Message,
-                    "Accept");
+                    Languages.Accept);
                 await Application.Current.MainPage.Navigation.PopAsync();
 
                 return;

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.CurrenciesPage"
+             xmlns:i18n="clr-namespace:Lands.Helpers"
              BindingContext="{Binding Main, Source={StaticResource locator}}"
              Icon="ic_monetization_on">
     <!--Title="Currencies"-->
@@ -16,7 +17,7 @@
                     FontSize="Large"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
-                    Text="Currencies"
+                    Text="{i18n:Translate Currencies}"
                     TextColor="Black">
                 </Label>
                 <Label 
@@ -38,21 +39,21 @@
                     Grid.Column="0"
                     FontSize="Medium"
                     FontAttributes="Bold"
-                    Text="Code"
+                    Text="{i18n:Translate Code}"
                     TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="1"
                     FontSize="Medium"
                     FontAttributes="Bold"
-                    Text="Name"
+                    Text="{i18n:Translate Name}"
                     TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="3"
                     FontSize="Medium"
                     FontAttributes="Bold"
-                    Text="Symbol"
+                    Text="{i18n:Translate Symbol}"
                     TextColor="Black">
                 </Label>
             </Grid>

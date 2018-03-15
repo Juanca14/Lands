@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LandPage"
+             xmlns:i18n="clr-namespace:Lands.Helpers"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
@@ -19,8 +20,6 @@
             BackgroundColor="Silver">
             <StackLayout 
                 Padding="10">
-                
-                <!-- https://devlinduldulao.pro/how-to-use-ffimageloading/-->
 
                 <ffimageloading:CachedImage WidthRequest="200" HeightRequest="200"
                       Source="{Binding Land.Flag2, Converter={StaticResource SvgImageSourceConverter}}">
@@ -44,7 +43,7 @@
                         VerticalOptions="EndAndExpand"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Capital:"
+                        Text="{i18n:Translate Capital}"
                         TextColor="Black">
                     </Label>
                     <Label 
@@ -62,7 +61,7 @@
                         VerticalOptions="EndAndExpand"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Population:"
+                        Text="{i18n:Translate Population}"
                         TextColor="Black">
                     </Label>
                     <Label 
@@ -80,7 +79,7 @@
                         VerticalOptions="EndAndExpand"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Area:"
+                        Text="{i18n:Translate Area}"
                         TextColor="Black">
                     </Label>
                     <Label 
@@ -98,7 +97,7 @@
                         VerticalOptions="EndAndExpand"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Alpha Code 2:"
+                        Text="{i18n:Translate AlphaCode2}"
                         TextColor="Black">
                     </Label>
                     <Label 
@@ -116,7 +115,7 @@
                         VerticalOptions="EndAndExpand"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Alpha Code 3:"
+                        Text="{i18n:Translate AlphaCode3}"
                         TextColor="Black">
                     </Label>
                     <Label 
@@ -134,7 +133,7 @@
                         VerticalOptions="EndAndExpand"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Region:"
+                        Text="{i18n:Translate Region}"
                         TextColor="Black">
                     </Label>
                     <Label 
@@ -151,7 +150,7 @@
                         Grid.Row="6"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Subregion:"
+                        Text="{i18n:Translate Subregion}"
                         TextColor="Black"
                         VerticalOptions="EndAndExpand">
                     </Label>
@@ -169,7 +168,7 @@
                         Grid.Row="7"     
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Demonym:"
+                        Text="{i18n:Translate Demonym}"
                         TextColor="Black"
                         VerticalOptions="EndAndExpand">
                     </Label>
@@ -187,7 +186,7 @@
                         Grid.Row="8"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="GINI:"
+                        Text="{i18n:Translate GINI}"
                         TextColor="Black"
                         VerticalOptions="EndAndExpand">
                     </Label>
@@ -205,7 +204,7 @@
                         Grid.Row="9"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="GINI:"
+                        Text="{i18n:Translate NativeName}"
                         TextColor="Black"
                         VerticalOptions="EndAndExpand">
                     </Label>
@@ -215,39 +214,21 @@
                         HorizontalOptions="CenterAndExpand"
                         FontAttributes="Bold"
                         VerticalOptions="EndAndExpand"
-                        Text="{Binding Land.Gini, StringFormat='{0:N2}'}"
-                        TextColor="Black">
-                    </Label>
-                    <Label 
-                        Grid.Column="0"
-                        Grid.Row="10"
-                        FontAttributes="Bold"
-                        FontSize="Medium"
-                        Text="Native Name:"
-                        TextColor="Black"
-                        VerticalOptions="EndAndExpand">
-                    </Label>
-                    <Label 
-                        Grid.Column="1"
-                        Grid.Row="10"
-                        HorizontalOptions="CenterAndExpand"
-                        FontAttributes="Bold"
-                        VerticalOptions="EndAndExpand"
                         Text="{Binding Land.NativeName}"
                         TextColor="Black">
                     </Label>
                     <Label 
                         Grid.Column="0"
-                        Grid.Row="11"
+                        Grid.Row="10"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="Numeric Code:"
+                        Text="{i18n:Translate NumericCode}"
                         TextColor="Black"
                         VerticalOptions="EndAndExpand">
                     </Label>
                     <Label 
                         Grid.Column="1"
-                        Grid.Row="11"
+                        Grid.Row="10"
                         HorizontalOptions="CenterAndExpand"
                         FontAttributes="Bold"
                         VerticalOptions="EndAndExpand"
@@ -256,16 +237,16 @@
                     </Label>
                     <Label 
                         Grid.Column="0"
-                        Grid.Row="12"
+                        Grid.Row="11"
                         FontAttributes="Bold"
                         FontSize="Medium"
-                        Text="CIOC:"
+                        Text="{i18n:Translate CIOC}"
                         TextColor="Black"
                         VerticalOptions="EndAndExpand">
                     </Label>
                     <Label 
                         Grid.Column="1"
-                        Grid.Row="12"
+                        Grid.Row="11"
                         HorizontalOptions="CenterAndExpand"
                         FontAttributes="Bold"
                         VerticalOptions="EndAndExpand"

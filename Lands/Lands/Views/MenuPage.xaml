@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5,20,5,5">
             <Label 
-                Text="Menu"
+                Text="{i18n:Translate Menu}"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 TextColor="White">

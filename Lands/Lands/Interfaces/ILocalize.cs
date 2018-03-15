@@ -1,7 +1,7 @@
-﻿using System.Globalization;
-
-namespace Lands.Interfaces
+﻿namespace Lands.Interfaces
 {
+    using System.Globalization;
+
     public interface ILocalize
     {
         CultureInfo GetCurrentCultureInfo();
