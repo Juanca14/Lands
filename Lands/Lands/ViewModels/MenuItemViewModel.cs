@@ -1,7 +1,4 @@
-﻿
-
-
-namespace Lands.ViewModels
+﻿namespace Lands.ViewModels
 {
 
     using GalaSoft.MvvmLight.Command;

@@ -89,9 +89,11 @@
                     </Button>
                     <Button
                         BackgroundColor="Green"
+                        
                         HorizontalOptions="FillAndExpand"
                         IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="{i18n:Translate Register}"
+                        Command="{Binding RegisterCommand}"
                         TextColor="White"
                         BorderRadius="23">
                     </Button>

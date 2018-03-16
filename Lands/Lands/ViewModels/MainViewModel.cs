@@ -30,6 +30,12 @@ namespace Lands.ViewModels
             set;
         }
 
+        public RegisterViewModel Register
+        {
+            get;
+            set;
+        }
+
         public LandsViewModel Lands
         {
             get;

@@ -220,5 +220,85 @@
             get { return Resource.Iso6391; }
         }
 
+        public static string FirstNameLabel
+        {
+            get { return Resource.FirstNameLabel; }
+        }
+
+        public static string EmailValidation2
+        {
+            get { return Resource.EmailValidation2; }
+        }
+
+        public static string PhoneValidation
+        {
+            get { return Resource.PhoneValidation; }
+        }
+
+        public static string ConfirmValidation
+        {
+            get { return Resource.ConfirmValidation; }
+        }
+
+        public static string ConfirmValidation2
+        {
+            get { return Resource.ConfirmValidation2; }
+        }
+
+        public static string ConfirmLabel
+        {
+            get { return Resource.ConfirmLabel; }
+        }
+
+        public static string UserRegisteredMessage
+        {
+            get { return Resource.UserRegisteredMessage; }
+        }
+
+        public static string SourceImageQuestion
+        {
+            get { return Resource.SourceImageQuestion; }
+        }
+
+        public static string Cancel
+        {
+            get { return Resource.Cancel; }
+        }
+
+        public static string FromGallery
+        {
+            get { return Resource.FromGallery; }
+        }
+
+        public static string FromCamera
+        {
+            get { return Resource.FromCamera; }
+        }
+
+        public static string PasswordValidation2
+        {
+            get { return Resource.PasswordValidation2; }
+        }
+
+        public static string FirstNameValidation
+        {
+            get { return Resource.FirstNameValidation; }
+        }
+
+        public static string LastNameValidation
+        {
+            get { return Resource.LastNameValidation; }
+        }
+
+        public static string ConnectionError1
+        {
+            get { return Resource.ConnectionError1; }
+        }
+
+        public static string ConnectionError2
+        {
+            get { return Resource.ConnectionError2; }
+        }
+
     }
 }
