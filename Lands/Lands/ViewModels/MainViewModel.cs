@@ -1,10 +1,11 @@
-﻿using Lands.Helpers;
-using Lands.Models;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace Lands.ViewModels
+﻿namespace Lands.ViewModels
 {
+    using Domain;
+    using Helpers;
+    using Models;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+
     public class MainViewModel
     {
 
@@ -54,8 +55,13 @@ namespace Lands.ViewModels
             set;
         }
 
+        public User User
+        {
+            get;
+            set;
+        }
 
-    #endregion
+        #endregion
 
         #region Constructors
         public MainViewModel()
@@ -108,7 +114,7 @@ namespace Lands.ViewModels
                 return new MainViewModel();
             }
 
-            return instance; 
+            return instance;
         }
 
         #endregion

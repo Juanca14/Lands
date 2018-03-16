@@ -375,4 +375,10 @@
   <data name="RegisterNewUser" xml:space="preserve">
     <value>Registrar nuevo usuario</value>
   </data>
+  <data name="example" xml:space="preserve">
+    <value>Ejemplo:</value>
+  </data>
+  <data name="Prueba" xml:space="preserve">
+    <value>Prueba</value>
+  </data>
 </root>

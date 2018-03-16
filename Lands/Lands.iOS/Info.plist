@@ -56,6 +56,10 @@
 		<string>pt</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>	
+	<string>en</string>
+	<key>NSCameraUsageDescription</key>
+	<string>NSPhotoLibraryUsageDescription</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Picture Picker uses photo library</string>
 </dict>
 </plist>

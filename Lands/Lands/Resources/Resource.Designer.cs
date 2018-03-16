@@ -358,6 +358,15 @@ namespace Lands.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Example.
+        /// </summary>
+        public static string example {
+            get {
+                return ResourceManager.GetString("example", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nombres.
         /// </summary>
         public static string FirstNameLabel {
@@ -696,6 +705,15 @@ namespace Lands.Resources {
         public static string Portuguese {
             get {
                 return ResourceManager.GetString("Portuguese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        public static string Prueba {
+            get {
+                return ResourceManager.GetString("Prueba", resourceCulture);
             }
         }
         
