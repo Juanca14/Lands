@@ -192,7 +192,6 @@ namespace Lands.ViewModels
                 return;
             }
 
-
             var mainViewModel = MainViewModel.GetInstance();
             mainViewModel.Token = token.AccessToken;
             mainViewModel.TokenType = token.TokenType;

@@ -5,6 +5,7 @@
     using System.Windows.Input;
     using Views;
     using Xamarin.Forms;
+    using Helpers;
 
     public class MenuItemViewModel
     {
@@ -28,15 +29,22 @@
 
         private void Navigate()
         {
+            var mainViewModel = MainViewModel.GetInstance();
+            App.Master.IsPresented = false;
+
             if (this.PageName == "LoginPage")
             {
-
-                var mainViewModel = MainViewModel.GetInstance();
+                Settings.Token = string.Empty;
+                Settings.TokenType = string.Empty;
                 mainViewModel.Token = string.Empty;
                 mainViewModel.TokenType = string.Empty;
-                Application.Current.MainPage = new LoginPage();
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
 
+            }
+            else if(this.PageName == "MyProfilePage")
+            {
+                mainViewModel.MyProfile = new MyProfileViewModel();
+                App.Navigator.PushAsync(new MyProfilePage());
             }
         }
 

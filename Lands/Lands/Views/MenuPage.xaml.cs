@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-namespace Lands.Views
+﻿namespace Lands.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    using ViewModels;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenuPage : ContentPage
 	{
 		public MenuPage ()
 		{
 			InitializeComponent ();
+        }
+
+        protected override void OnAppearing()
+		{
+			base.OnAppearing();
+            MainViewModel.GetInstance().RefreshUser();
 		}
-	}
+}
 }

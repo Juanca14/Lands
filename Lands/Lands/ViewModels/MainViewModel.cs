@@ -5,15 +5,31 @@
     using Models;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using Services;
 
-    public class MainViewModel
+    public class MainViewModel: BaseViewModel
     {
+        #region Services
+        private DataServices dataServices;
+        #endregion
+
+        #region Attributes
+        private UserLocal user;
+        #endregion
 
         #region Properties
 
-        public string Token { get; set; }
+        public string Token
+        {
+            get;
+            set;
+        }
 
-        public string TokenType { get; set; }
+        public string TokenType
+        {
+            get;
+            set;
+        }
 
         #endregion
 
@@ -55,10 +71,16 @@
             set;
         }
 
-        public User User
+        public MyProfileViewModel MyProfile
         {
-            get;
-            set;
+           get;
+           set;
+        }
+
+        public UserLocal User
+        {
+            get { return this.user; }
+            set { SetValue(ref this.user, value); }
         }
 
         #endregion
@@ -67,12 +89,19 @@
         public MainViewModel()
         {
             instance = this;
+            this.dataServices = new DataServices();
             this.Login = new LoginViewModel();
             this.LoadMenu();
         }
         #endregion
 
         #region Methods
+
+        public void RefreshUser()
+        {
+            var userLocal = this.dataServices.First<UserLocal>(false);
+            this.User = userLocal;
+        }
 
         private void LoadMenu()
         {

@@ -10,7 +10,13 @@
         public MasterPage() 
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
             App.Navigator = Navigator;
-        }  
-	}
+            App.Master = this;
+        }
+    }
 }
