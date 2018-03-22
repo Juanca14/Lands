@@ -14,6 +14,7 @@ namespace Lands.ViewModels
     {
         #region Services
         private ApiServices apiServices;
+        private DataServices dataServices;
         #endregion
 
         #region Attributes
@@ -58,9 +59,11 @@ namespace Lands.ViewModels
         #endregion
 
         #region Constructors
+
         public LoginViewModel()
         {
             this.apiServices = new ApiServices();
+            this.dataServices = new DataServices();
             this.IsRemembered = true;
             this.IsEnabled = true;
             this.Email = "Juank-nac@hotmail.com";
@@ -192,14 +195,24 @@ namespace Lands.ViewModels
                 return;
             }
 
+            var user = await this.apiServices.GetUserByEmail(
+                apiSecurity,
+                "/api",
+                "/Users/GetUserByEmail",
+                this.Email);
+
+            var userLocal = Converter.ToUserLocal(user);
+
             var mainViewModel = MainViewModel.GetInstance();
             mainViewModel.Token = token.AccessToken;
             mainViewModel.TokenType = token.TokenType;
+            mainViewModel.User = userLocal;   
 
             if (this.IsRemembered)
             {
                 Settings.Token = token.AccessToken;
                 Settings.TokenType = token.TokenType;
+                this.dataServices.DeleteAllAndInsert(userLocal);
             }
 
             mainViewModel.Lands = new LandsViewModel();
