@@ -199,6 +199,8 @@ namespace Lands.ViewModels
                 apiSecurity,
                 "/api",
                 "/Users/GetUserByEmail",
+                token.TokenType,
+                token.AccessToken,
                 this.Email);
 
             var userLocal = Converter.ToUserLocal(user);
@@ -206,7 +208,7 @@ namespace Lands.ViewModels
             var mainViewModel = MainViewModel.GetInstance();
             mainViewModel.Token = token.AccessToken;
             mainViewModel.TokenType = token.TokenType;
-            mainViewModel.User = userLocal;   
+            mainViewModel.User = userLocal;
 
             if (this.IsRemembered)
             {
