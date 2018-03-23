@@ -276,9 +276,6 @@
   <data name="Symbol" xml:space="preserve">
     <value>Símbolo</value>
   </data>
-  <data name="RegisterTitle" xml:space="preserve">
-    <value>Registrar Nuevo Usuario</value>
-  </data>
   <data name="ChangeImage" xml:space="preserve">
     <value>Toca la imagen para cambiarla.</value>
   </data>
@@ -374,11 +371,5 @@
   </data>
   <data name="RegisterNewUser" xml:space="preserve">
     <value>Registrar nuevo usuario</value>
-  </data>
-  <data name="example" xml:space="preserve">
-    <value>Ejemplo:</value>
-  </data>
-  <data name="Prueba" xml:space="preserve">
-    <value>Prueba</value>
   </data>
 </root>

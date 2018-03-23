@@ -276,109 +276,100 @@
   <data name="Symbol" xml:space="preserve">
     <value>Symbol</value>
   </data>
-  <data name="RegisterTitle" xml:space="preserve">
-    <value>Registrar Nuevo Usuario</value>
-  </data>
   <data name="ChangeImage" xml:space="preserve">
-    <value>Toca la imagen para cambiarla.</value>
+    <value>Touch the image to change it.</value>
   </data>
   <data name="FirstNameLabel" xml:space="preserve">
-    <value>Nombres</value>
+    <value>Names</value>
   </data>
   <data name="FirstNamePlaceHolder" xml:space="preserve">
-    <value>Ingresa nombres...</value>
+    <value>Enter names ...</value>
   </data>
   <data name="FirstNameValidation" xml:space="preserve">
-    <value>Debes ingresar nombre(s)</value>
+    <value>You must enter name (s)</value>
   </data>
   <data name="LastNameLabel" xml:space="preserve">
-    <value>Apellidos</value>
+    <value>Surnames</value>
   </data>
   <data name="LastNamePlaceHolder" xml:space="preserve">
-    <value>Ingresa apellidos...</value>
+    <value>Enter surnames ...</value>
   </data>
   <data name="LastNameValidation" xml:space="preserve">
-    <value>Debes ingresar apellido(s).</value>
+    <value>You must enter last name (s)</value>
   </data>
   <data name="PhoneLabel" xml:space="preserve">
-    <value>Teléfono</value>
+    <value>Phone</value>
   </data>
   <data name="PhonePlaceHolder" xml:space="preserve">
-    <value>Ingresa teléfono...</value>
+    <value>Enter phone ...</value>
   </data>
   <data name="PhoneValidation" xml:space="preserve">
-    <value>Debes ingresar un teléfono.</value>
+    <value>You must enter a phone.</value>
   </data>
   <data name="ConfirmLabel" xml:space="preserve">
-    <value>Confirmación</value>
+    <value>Confirmation</value>
   </data>
   <data name="ConfirmPlaceHolder" xml:space="preserve">
-    <value>Ingresa la confimación de clave...</value>
+    <value>Enter the key confirmation ...</value>
   </data>
   <data name="ConfirmValidation" xml:space="preserve">
-    <value>Debes ingresar la confirmación de la clave.</value>
+    <value>You must enter the confirmation of the key.</value>
   </data>
   <data name="EmailValidation2" xml:space="preserve">
-    <value>Debes ingresar un email válido.</value>
+    <value>You must enter a valid email.</value>
   </data>
   <data name="PasswordValidation2" xml:space="preserve">
-    <value>La contraseña debe tener al menos sies (6) carácteres.</value>
+    <value>The password must have at least six (6) characters.</value>
   </data>
   <data name="ConfirmValidation2" xml:space="preserve">
-    <value>La contraseña y la confirmación no concuerdan.</value>
+    <value>The password and the confirmation do not match.</value>
   </data>
   <data name="UserRegisteredMessage" xml:space="preserve">
-    <value>Usuario registrado, ya puedes ingresar con este email y clave asignada.</value>
+    <value>Registered user, you can enter with this email and assigned password.</value>
   </data>
   <data name="SourceImageQuestion" xml:space="preserve">
-    <value>¿De donde quieres tomar la imagen?</value>
+    <value>Where do you want to take the picture from?</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Cancel</value>
   </data>
   <data name="FromGallery" xml:space="preserve">
-    <value>Desde la galería</value>
+    <value>From the gallery</value>
   </data>
   <data name="FromCamera" xml:space="preserve">
-    <value>Desde la cámara</value>
+    <value>From the camera</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Save</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
-    <value>Cambiar Contraseña</value>
+    <value>Change Password</value>
   </data>
   <data name="CurrentPassword" xml:space="preserve">
-    <value>Contraseña actual</value>
+    <value>Current password</value>
   </data>
   <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
-    <value>Ingrese su contraseña actual...</value>
+    <value>Enter your current password ...</value>
   </data>
   <data name="NewPassword" xml:space="preserve">
-    <value>Contraseña nueva</value>
+    <value>New password</value>
   </data>
   <data name="NewPasswordPlaceHolder" xml:space="preserve">
-    <value>Ingrese la nueva contraseña...</value>
+    <value>Enter the new password ...</value>
   </data>
   <data name="ConnectionError1" xml:space="preserve">
-    <value>Verifica que tengas los parámetros de internet activados.</value>
+    <value>Verify that you have the internet parameters activated.</value>
   </data>
   <data name="ConnectionError2" xml:space="preserve">
-    <value>Verifica que tengas conexión a internet.</value>
+    <value>Verify that you have an internet connection.</value>
   </data>
   <data name="LoginError" xml:space="preserve">
-    <value>Email o contraseña incorrectos.</value>
+    <value>Wrong email or password.</value>
   </data>
   <data name="ChagePasswordConfirm" xml:space="preserve">
-    <value>La contraseña fue cambiada exitosamente.</value>
+    <value>The password was successfully changed.</value>
   </data>
   <data name="RegisterNewUser" xml:space="preserve">
     <value>Register new user</value>
-  </data>
-  <data name="example" xml:space="preserve">
-    <value>Example</value>
-  </data>
-  <data name="Prueba" xml:space="preserve">
-    <value>test</value>
   </data>
 </root>

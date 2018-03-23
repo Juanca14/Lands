@@ -115,7 +115,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cancelar.
+        ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
             get {
@@ -133,7 +133,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La contraseña fue cambiada exitosamente..
+        ///   Looks up a localized string similar to The password was successfully changed..
         /// </summary>
         public static string ChagePasswordConfirm {
             get {
@@ -142,7 +142,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Toca la imagen para cambiarla..
+        ///   Looks up a localized string similar to Touch the image to change it..
         /// </summary>
         public static string ChangeImage {
             get {
@@ -151,7 +151,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cambiar Contraseña.
+        ///   Looks up a localized string similar to Change Password.
         /// </summary>
         public static string ChangePassword {
             get {
@@ -178,7 +178,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirmación.
+        ///   Looks up a localized string similar to Confirmation.
         /// </summary>
         public static string ConfirmLabel {
             get {
@@ -187,7 +187,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ingresa la confimación de clave....
+        ///   Looks up a localized string similar to Enter the key confirmation ....
         /// </summary>
         public static string ConfirmPlaceHolder {
             get {
@@ -196,7 +196,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debes ingresar la confirmación de la clave..
+        ///   Looks up a localized string similar to You must enter the confirmation of the key..
         /// </summary>
         public static string ConfirmValidation {
             get {
@@ -205,7 +205,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La contraseña y la confirmación no concuerdan..
+        ///   Looks up a localized string similar to The password and the confirmation do not match..
         /// </summary>
         public static string ConfirmValidation2 {
             get {
@@ -214,7 +214,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Verifica que tengas los parámetros de internet activados..
+        ///   Looks up a localized string similar to Verify that you have the internet parameters activated..
         /// </summary>
         public static string ConnectionError1 {
             get {
@@ -223,7 +223,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Verifica que tengas conexión a internet..
+        ///   Looks up a localized string similar to Verify that you have an internet connection..
         /// </summary>
         public static string ConnectionError2 {
             get {
@@ -268,7 +268,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contraseña actual.
+        ///   Looks up a localized string similar to Current password.
         /// </summary>
         public static string CurrentPassword {
             get {
@@ -277,7 +277,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ingrese su contraseña actual....
+        ///   Looks up a localized string similar to Enter your current password ....
         /// </summary>
         public static string CurrentPasswordPlaceHolder {
             get {
@@ -340,7 +340,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debes ingresar un email válido..
+        ///   Looks up a localized string similar to You must enter a valid email..
         /// </summary>
         public static string EmailValidation2 {
             get {
@@ -358,16 +358,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Example.
-        /// </summary>
-        public static string example {
-            get {
-                return ResourceManager.GetString("example", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Nombres.
+        ///   Looks up a localized string similar to Names.
         /// </summary>
         public static string FirstNameLabel {
             get {
@@ -376,7 +367,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ingresa nombres....
+        ///   Looks up a localized string similar to Enter names ....
         /// </summary>
         public static string FirstNamePlaceHolder {
             get {
@@ -385,7 +376,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debes ingresar nombre(s).
+        ///   Looks up a localized string similar to You must enter name (s).
         /// </summary>
         public static string FirstNameValidation {
             get {
@@ -412,7 +403,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desde la cámara.
+        ///   Looks up a localized string similar to From the camera.
         /// </summary>
         public static string FromCamera {
             get {
@@ -421,7 +412,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desde la galería.
+        ///   Looks up a localized string similar to From the gallery.
         /// </summary>
         public static string FromGallery {
             get {
@@ -493,7 +484,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apellidos.
+        ///   Looks up a localized string similar to Surnames.
         /// </summary>
         public static string LastNameLabel {
             get {
@@ -502,7 +493,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ingresa apellidos....
+        ///   Looks up a localized string similar to Enter surnames ....
         /// </summary>
         public static string LastNamePlaceHolder {
             get {
@@ -511,7 +502,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debes ingresar apellido(s)..
+        ///   Looks up a localized string similar to You must enter last name (s).
         /// </summary>
         public static string LastNameValidation {
             get {
@@ -529,7 +520,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email o contraseña incorrectos..
+        ///   Looks up a localized string similar to Wrong email or password..
         /// </summary>
         public static string LoginError {
             get {
@@ -592,7 +583,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contraseña nueva.
+        ///   Looks up a localized string similar to New password.
         /// </summary>
         public static string NewPassword {
             get {
@@ -601,7 +592,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ingrese la nueva contraseña....
+        ///   Looks up a localized string similar to Enter the new password ....
         /// </summary>
         public static string NewPasswordPlaceHolder {
             get {
@@ -646,7 +637,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La contraseña debe tener al menos sies (6) carácteres..
+        ///   Looks up a localized string similar to The password must have at least six (6) characters..
         /// </summary>
         public static string PasswordValidation2 {
             get {
@@ -664,7 +655,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Teléfono.
+        ///   Looks up a localized string similar to Phone.
         /// </summary>
         public static string PhoneLabel {
             get {
@@ -673,7 +664,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ingresa teléfono....
+        ///   Looks up a localized string similar to Enter phone ....
         /// </summary>
         public static string PhonePlaceHolder {
             get {
@@ -682,7 +673,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debes ingresar un teléfono..
+        ///   Looks up a localized string similar to You must enter a phone..
         /// </summary>
         public static string PhoneValidation {
             get {
@@ -705,15 +696,6 @@ namespace Lands.Resources {
         public static string Portuguese {
             get {
                 return ResourceManager.GetString("Portuguese", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string Prueba {
-            get {
-                return ResourceManager.GetString("Prueba", resourceCulture);
             }
         }
         
@@ -745,15 +727,6 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registrar Nuevo Usuario.
-        /// </summary>
-        public static string RegisterTitle {
-            get {
-                return ResourceManager.GetString("RegisterTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Rememberme in this device.
         /// </summary>
         public static string Rememberme {
@@ -763,7 +736,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Guardar.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
         public static string Save {
             get {
@@ -790,7 +763,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ¿De donde quieres tomar la imagen?.
+        ///   Looks up a localized string similar to Where do you want to take the picture from?.
         /// </summary>
         public static string SourceImageQuestion {
             get {
@@ -844,7 +817,7 @@ namespace Lands.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Usuario registrado, ya puedes ingresar con este email y clave asignada..
+        ///   Looks up a localized string similar to Registered user, you can enter with this email and assigned password..
         /// </summary>
         public static string UserRegisteredMessage {
             get {
